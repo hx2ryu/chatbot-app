@@ -14,6 +14,11 @@
 		6172F2D35A4C3AA820D92908 /* libPods-chatbot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-chatbot.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-chatbot-chatbotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-chatbot-chatbotTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E7FE8DF9D3AF40AA8CAAC207 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 89D1DE82E5B64BF48D77F08A /* SpoqaHanSansNeo-Bold.otf */; };
+		026A6E68B9184112A0922128 /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6660AB8DA74D47B3A3A1AE2A /* SpoqaHanSansNeo-Light.otf */; };
+		1F92ADB47BEE4E49A788AFD9 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65C17A2E370943AD9C055962 /* SpoqaHanSansNeo-Medium.otf */; };
+		2AAB24C92DBA42478F654DF2 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D5E4CDFBBBF473E8D888D6C /* SpoqaHanSansNeo-Regular.otf */; };
+		3A7EA58EC9F14E2681DED448 /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6AA03A01474979837B30AC /* SpoqaHanSansNeo-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		C0A881CF5CF3F2B244570E2A /* Pods-chatbot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatbot.debug.xcconfig"; path = "Target Support Files/Pods-chatbot/Pods-chatbot.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-chatbot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatbot.release.xcconfig"; path = "Target Support Files/Pods-chatbot/Pods-chatbot.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		89D1DE82E5B64BF48D77F08A /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; name = "SpoqaHanSansNeo-Bold.otf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6660AB8DA74D47B3A3A1AE2A /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; name = "SpoqaHanSansNeo-Light.otf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		65C17A2E370943AD9C055962 /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; name = "SpoqaHanSansNeo-Medium.otf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D5E4CDFBBBF473E8D888D6C /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; name = "SpoqaHanSansNeo-Regular.otf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA6AA03A01474979837B30AC /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; name = "SpoqaHanSansNeo-Thin.otf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
+				61DE9D00D4CE42F9BC9CB313 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +159,19 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		61DE9D00D4CE42F9BC9CB313 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				89D1DE82E5B64BF48D77F08A /* SpoqaHanSansNeo-Bold.otf */,
+				6660AB8DA74D47B3A3A1AE2A /* SpoqaHanSansNeo-Light.otf */,
+				65C17A2E370943AD9C055962 /* SpoqaHanSansNeo-Medium.otf */,
+				6D5E4CDFBBBF473E8D888D6C /* SpoqaHanSansNeo-Regular.otf */,
+				CA6AA03A01474979837B30AC /* SpoqaHanSansNeo-Thin.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +269,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E7FE8DF9D3AF40AA8CAAC207 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				026A6E68B9184112A0922128 /* SpoqaHanSansNeo-Light.otf in Resources */,
+				1F92ADB47BEE4E49A788AFD9 /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				2AAB24C92DBA42478F654DF2 /* SpoqaHanSansNeo-Regular.otf in Resources */,
+				3A7EA58EC9F14E2681DED448 /* SpoqaHanSansNeo-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
