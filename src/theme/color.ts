@@ -1,4 +1,6 @@
 const COLORS = {
+  white: '#f8f9fa',
+  black: '#212529',
   grayscale: {
     100: '#FAFAFA',
     150: '#F2F2F2',
@@ -23,6 +25,7 @@ const COLORS = {
     900: '#262D40',
     1000: '#OA1220',
   },
+  yellow: '#fcc419',
 };
 
 export { COLORS };

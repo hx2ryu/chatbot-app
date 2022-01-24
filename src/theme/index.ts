@@ -1,4 +1,4 @@
-import { ICONS } from './img';
+import { ICONS } from './icon';
 import { FONTS, FontType } from './font';
 import { COLORS } from './color';
 
