@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   sendIcon: {
-    height: 33,
-    width: 33,
+    height: 35,
+    width: 35,
     tintColor: COLORS.primary,
   },
 });

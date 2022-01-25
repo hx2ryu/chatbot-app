@@ -28,7 +28,7 @@ const Message: React.FC<Props> = ({
         backgroundColor: fromBot ? COLORS.blue[200] : COLORS.primary,
       } as ViewStyle,
       textStyle: {
-        color: fromBot ? COLORS.black : COLORS.white,
+        color: fromBot ? COLORS.grayscale[500] : COLORS.white,
       } as ViewStyle,
     };
   }, [sender]);
