@@ -1,14 +1,15 @@
 import React from 'react';
 import { useGetSafeAreaStyle } from '@/hooks';
 import { StyleSheet, View } from 'react-native';
-import { ChattingRoom } from '../organisms';
+import { ChattingRoom, MessageSender } from '../organisms';
 
 const ChatPage: React.FC = () => {
-  const { topSafeAreaStyle } = useGetSafeAreaStyle();
+  const { verticalSafeAreaStyle, bottomSafeAreaStyle } = useGetSafeAreaStyle();
 
   return (
-    <View style={[styles.root, topSafeAreaStyle]}>
+    <View style={[styles.root, verticalSafeAreaStyle]}>
       <ChattingRoom />
+      <MessageSender style={bottomSafeAreaStyle} />
     </View>
   );
 };

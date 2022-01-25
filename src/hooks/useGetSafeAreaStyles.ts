@@ -10,6 +10,10 @@ const useGetSafeAreaStyle = () => {
     bottomSafeAreaStyle: {
       paddingBottom: bottom > 16 ? bottom : 16,
     } as StyleProp<ViewStyle>,
+    verticalSafeAreaStyle: {
+      paddingTop: top > 16 ? top : 16,
+      paddingBottom: bottom > 16 ? bottom : 16,
+    } as StyleProp<ViewStyle>,
   };
 };
 
