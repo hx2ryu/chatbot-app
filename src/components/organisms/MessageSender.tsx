@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     right: 0,
     flexDirection: 'row',
     alignItems: 'flex-end',
-    backgroundColor: COLORS.grayscale[500],
+    backgroundColor: COLORS.primary,
     paddingTop: 10,
     paddingHorizontal: 20,
   },
@@ -74,5 +74,6 @@ const styles = StyleSheet.create({
   sendIcon: {
     height: 33,
     width: 33,
+    tintColor: COLORS.primary,
   },
 });

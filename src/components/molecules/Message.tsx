@@ -17,7 +17,7 @@ const Message: React.FC<Props> = ({
   timestamp,
   timeVisible,
 }) => {
-  const { containerStyle, isSentFromBot } = useMemo(() => {
+  const { containerStyle, isSentFromBot, textStyle } = useMemo(() => {
     const fromBot = sender === 'bot';
     return {
       isSentFromBot: fromBot,
@@ -25,7 +25,10 @@ const Message: React.FC<Props> = ({
         padding: 10,
         marginBottom: 5,
         borderRadius: 8,
-        backgroundColor: fromBot ? COLORS.yellow : COLORS.grayscale[500],
+        backgroundColor: fromBot ? COLORS.blue[200] : COLORS.primary,
+      } as ViewStyle,
+      textStyle: {
+        color: fromBot ? COLORS.black : COLORS.white,
       } as ViewStyle,
     };
   }, [sender]);
@@ -34,7 +37,7 @@ const Message: React.FC<Props> = ({
     <View style={styles.root}>
       {timeVisible && !isSentFromBot && <TimePresenter timestamp={timestamp} />}
       <View style={containerStyle}>
-        <Text type={'blockQuote2'} style={styles.text}>
+        <Text type={'blockQuote2'} style={textStyle}>
           {message}
         </Text>
       </View>

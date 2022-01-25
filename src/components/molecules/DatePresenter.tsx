@@ -28,11 +28,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   container: {
-    backgroundColor: COLORS.grayscale[500],
+    backgroundColor: COLORS.primary,
     borderRadius: 15,
-    paddingVertical: 5,
-    paddingHorizontal: 20,
+    paddingVertical: 2,
+    paddingHorizontal: 15,
     justifyContent: 'center',
+    opacity: 0.8,
   },
   text: {
     fontSize: 12,
