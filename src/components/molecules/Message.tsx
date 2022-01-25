@@ -1,11 +1,12 @@
-import { StyleSheet, View, ViewStyle } from 'react-native';
 import React, { useMemo } from 'react';
+import { StyleSheet, View, ViewStyle } from 'react-native';
 import { Text } from '../atoms';
 import { COLORS } from '@/theme';
 import { TimePresenter } from '.';
+import { Dialogue } from '@/lib/types/chat';
 
 type Props = {
-  sender: 'me' | 'bot';
+  sender: Dialogue['sender'];
   message: string;
   timestamp: string;
   timeVisible: boolean;
