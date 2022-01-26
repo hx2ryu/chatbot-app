@@ -22,9 +22,6 @@ const Message: React.FC<Props> = ({
     return {
       isSentFromBot: fromBot,
       containerStyle: {
-        padding: 10,
-        marginBottom: 5,
-        borderRadius: 8,
         backgroundColor: fromBot ? COLORS.blue[200] : COLORS.primary,
       } as ViewStyle,
       textStyle: {
@@ -36,7 +33,7 @@ const Message: React.FC<Props> = ({
   return (
     <View style={styles.root}>
       {timeVisible && !isSentFromBot && <TimePresenter timestamp={timestamp} />}
-      <View style={containerStyle}>
+      <View style={[styles.containerStyle, containerStyle]}>
         <Text type={'blockQuote2'} style={textStyle}>
           {message}
         </Text>
@@ -51,6 +48,11 @@ export default Message;
 const styles = StyleSheet.create({
   root: {
     flexDirection: 'row',
+  },
+  containerStyle: {
+    padding: 10,
+    marginBottom: 5,
+    borderRadius: 8,
   },
   text: {
     color: COLORS.white,
