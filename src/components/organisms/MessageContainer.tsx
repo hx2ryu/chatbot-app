@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View, ViewStyle } from 'react-native';
+import { StyleSheet, View, ViewStyle } from 'react-native';
 import { DatePresenter, Message } from '../molecules';
 import { Dialogue } from '@/lib/types/chat';
 
@@ -12,13 +12,9 @@ const MessageContainer: React.FC<Props> = ({ data, newDateStr }) => {
   const { containerStyle, messagesWrapperStyle } = useMemo(() => {
     return {
       containerStyle: {
-        flexDirection: 'row',
         justifyContent: sender === 'bot' ? 'flex-start' : 'flex-end',
-        marginBottom: 10,
       } as ViewStyle,
       messagesWrapperStyle: {
-        width: '80%',
-        justifyContent: 'flex-start',
         alignItems: sender === 'bot' ? 'flex-start' : 'flex-end',
       } as ViewStyle,
     };
@@ -27,8 +23,8 @@ const MessageContainer: React.FC<Props> = ({ data, newDateStr }) => {
   return (
     <View>
       {newDateStr && <DatePresenter data={newDateStr} />}
-      <View style={containerStyle}>
-        <View style={messagesWrapperStyle}>
+      <View style={[styles.containerStyle, containerStyle]}>
+        <View style={[styles.messageWrapperStyle, messagesWrapperStyle]}>
           {messages.map((message, index) => (
             <Message
               sender={sender}
@@ -45,3 +41,13 @@ const MessageContainer: React.FC<Props> = ({ data, newDateStr }) => {
 };
 
 export default MessageContainer;
+const styles = StyleSheet.create({
+  containerStyle: {
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
+  messageWrapperStyle: {
+    width: '80%',
+    justifyContent: 'flex-start',
+  },
+});
