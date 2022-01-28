@@ -22,10 +22,10 @@ const Message: React.FC<Props> = ({
     return {
       isSentFromBot: fromBot,
       containerStyle: {
-        backgroundColor: fromBot ? COLORS.blue[200] : COLORS.primary,
+        backgroundColor: fromBot ? COLORS.secondary : COLORS.primary,
       } as ViewStyle,
       textStyle: {
-        color: fromBot ? COLORS.grayscale[500] : COLORS.white,
+        color: fromBot ? COLORS.black : COLORS.white,
       } as ViewStyle,
     };
   }, [sender]);
