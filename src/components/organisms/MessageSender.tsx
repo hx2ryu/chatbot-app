@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, TextInput, View, ViewProps } from 'react-native';
-import { COLORS, FONTS, ICONS } from '@/theme';
-import { useInput } from '@/hooks';
+import { COLORS, FONTS, ICONS } from '@/utils/theme';
+import { useInput } from '@/utils/hooks';
 import { IconButton } from '../atoms';
 
 interface Props extends ViewProps {}

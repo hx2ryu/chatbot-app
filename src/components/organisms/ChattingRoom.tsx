@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
-import { Dialogue } from '@/lib/types/chat';
+import { Dialogue } from '@/store/types/chat';
 import { getNewDate, transformDateString } from '@/utils/date';
 import { MessageContainer } from '.';
 

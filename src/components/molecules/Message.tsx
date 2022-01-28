@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { StyleSheet, View, ViewStyle } from 'react-native';
 import { Text } from '../atoms';
-import { COLORS } from '@/theme';
+import { COLORS } from '@/utils/theme';
 import { TimePresenter } from '.';
-import { Dialogue } from '@/lib/types/chat';
+import { Dialogue } from '@/store/types/chat';
 
 type Props = {
   sender: Dialogue['sender'];

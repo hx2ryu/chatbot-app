@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLORS } from '@/theme';
+import { COLORS } from '@/utils/theme';
 import { StyleSheet, View } from 'react-native';
 import { Text } from '../atoms';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FONTS, FontType } from '@/theme';
+import { FONTS, FontType } from '@/utils/theme';
 import { Text as TextBase, TextProps } from 'react-native';
 
 interface Props extends TextProps {

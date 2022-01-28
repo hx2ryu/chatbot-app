@@ -48,20 +48,8 @@
       "@components/*": [
         "src/components/*"
       ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@constants/*": [
-        "src/constants/*"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@navigation/*": [
-        "src/navigation/*"
-      ],
-      "@theme/*": [
-        "src/theme/*"
+      "@store/*": [
+        "src/store/*"
       ],
       "@utils/*": [
         "src/utils/*"

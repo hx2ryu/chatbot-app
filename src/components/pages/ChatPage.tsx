@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGetSafeAreaStyle } from '@/hooks';
+import { useGetSafeAreaStyle } from '@/utils/hooks';
 import { StyleSheet, View } from 'react-native';
 import { ChattingRoom, MessageSender } from '../organisms';
 
