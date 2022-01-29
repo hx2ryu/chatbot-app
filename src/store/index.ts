@@ -3,7 +3,7 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import dialogueReducer from './dialogue/slice';
 
 const rootReducer = combineReducers({
-  dialog: dialogueReducer,
+  dialogue: dialogueReducer,
 });
 
 const store = configureStore({

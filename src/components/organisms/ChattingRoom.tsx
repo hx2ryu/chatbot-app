@@ -1,28 +1,12 @@
 import React, { useRef } from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
-import { Dialogue } from '@/store/types/chat';
 import { getNewDate, transformDateString } from '@/utils/date';
 import { MessageContainer } from '.';
+import { Dialogue } from '@/store/dialogue/types';
+import { useAppSelector } from '@/store';
 
-const dialogue: Dialogue[] = [
-  {
-    sender: 'bot',
-    messages: [
-      '안녕하세ffefefefefefefefefefefeffeefefefefefefefefefefefefefeffe요',
-      '반가워요',
-    ],
-    timestamp: new Date().toISOString(),
-  },
-  {
-    sender: 'me',
-    messages: [
-      '응',
-      '안녕dfdfwffwfwffwfweefefefefefeefefefefefefefffefefefefwefefwe',
-    ],
-    timestamp: new Date().toISOString(),
-  },
-];
 const ChattingRoom: React.FC = () => {
+  const dialogue = useAppSelector(state => state.dialogue);
   const listRef = useRef<FlatList>(null);
   const handleUpdateScrollPosition = () => {
     listRef.current?.scrollToEnd();

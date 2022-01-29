@@ -3,12 +3,15 @@ import { StyleSheet, TextInput, View, ViewProps } from 'react-native';
 import { COLORS, FONTS, ICONS } from '@/utils/theme';
 import { useInput } from '@/utils/hooks';
 import { IconButton } from '../atoms';
+import { useDialougue } from '@/store/dialogue/slice';
 
 interface Props extends ViewProps {}
 const MessageSender: React.FC<Props> = ({ style }) => {
   const { value, onChangeText, sendVisible } = useInput();
+  const { messageSent } = useDialougue();
 
   const handleSend = () => {
+    messageSent(value);
     onChangeText('');
   };
 

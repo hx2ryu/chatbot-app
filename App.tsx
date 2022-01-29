@@ -1,12 +1,16 @@
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ChatPage } from '@/screens';
+import { Provider } from 'react-redux';
+import store from '@/store';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <ChatPage />
-    </SafeAreaProvider>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <ChatPage />
+      </SafeAreaProvider>
+    </Provider>
   );
 };
 
