@@ -1,7 +1,7 @@
 import React from 'react';
 import { useGetSafeAreaStyle } from '@/utils/hooks';
 import { StyleSheet, View } from 'react-native';
-import { ChattingRoom, MessageSender } from '../organisms';
+import { ChattingRoom, MessageSender } from '../components/organisms';
 
 const ChatPage: React.FC = () => {
   const { verticalSafeAreaStyle, bottomSafeAreaStyle } = useGetSafeAreaStyle();
