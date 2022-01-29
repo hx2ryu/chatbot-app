@@ -3,7 +3,7 @@ import { StyleSheet, View, ViewStyle } from 'react-native';
 import { Text } from '../atoms';
 import { COLORS } from '@/utils/theme';
 import { TimePresenter } from '.';
-import { Dialogue } from '@/store/types/chat';
+import { Dialogue } from '@/store/dialogue/types';
 
 type Props = {
   sender: Dialogue['sender'];
