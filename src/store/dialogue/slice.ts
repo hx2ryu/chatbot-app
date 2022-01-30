@@ -15,7 +15,7 @@ const dialogueSlice = createSlice({
       prepare: (message: string) => ({
         payload: {
           sender: 'me',
-          messages: [message],
+          messages: [{ type: 'text', value: message }],
           timestamp: new Date().toISOString(),
         } as Dialogue,
       }),
@@ -23,7 +23,15 @@ const dialogueSlice = createSlice({
         state.push(payload);
         state.push({
           sender: 'bot',
-          messages: ['반가워요.', '테스트 메시지 입니다.'],
+          messages: [
+            { type: 'text', value: '안녕하세요.' },
+            { type: 'text', value: '반가워요' },
+            {
+              type: 'image',
+              value:
+                'https://cdn.pixabay.com/photo/2021/12/18/06/01/sunset-6878021_1280.jpg',
+            },
+          ],
           timestamp: new Date().toISOString(),
         });
       },

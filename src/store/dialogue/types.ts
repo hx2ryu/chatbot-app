@@ -1,5 +1,10 @@
 export type Dialogue = {
   sender: 'me' | 'bot';
-  messages: string[];
+  messages: MessageType[];
   timestamp: string;
+};
+
+export type MessageType = {
+  type: 'text' | 'card' | 'image';
+  value: string;
 };

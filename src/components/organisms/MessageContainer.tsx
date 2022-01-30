@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { StyleSheet, View, ViewStyle } from 'react-native';
 import { DatePresenter, Message } from '../molecules';
-import { Dialogue } from '@/store/types/chat';
+import { Dialogue } from '@/store/dialogue/types';
 
 type Props = {
   data: Dialogue;

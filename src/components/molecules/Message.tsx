@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
-import { StyleSheet, View, ViewStyle } from 'react-native';
+import { Image, StyleSheet, View, ViewStyle } from 'react-native';
 import { Text } from '../atoms';
 import { COLORS } from '@/utils/theme';
 import { TimePresenter } from '.';
-import { Dialogue } from '@/store/dialogue/types';
+import { Dialogue, MessageType } from '@/store/dialogue/types';
 
 type Props = {
   sender: Dialogue['sender'];
-  message: string;
+  message: MessageType;
   timestamp: string;
   timeVisible: boolean;
 };
@@ -30,13 +30,28 @@ const Message: React.FC<Props> = ({
     };
   }, [sender]);
 
+  const renderMessageContent = () => {
+    const { type, value } = message;
+    switch (type) {
+      case 'text':
+      default:
+        return (
+          <Text type={'blockQuote2'} style={textStyle}>
+            {value}
+          </Text>
+        );
+      case 'image':
+        return <Image source={{ uri: value }} style={styles.image} />;
+      case 'card':
+        return;
+    }
+  };
+
   return (
     <View style={styles.root}>
       {timeVisible && !isSentFromBot && <TimePresenter timestamp={timestamp} />}
       <View style={[styles.containerStyle, containerStyle]}>
-        <Text type={'blockQuote2'} style={textStyle}>
-          {message}
-        </Text>
+        {renderMessageContent()}
       </View>
       {timeVisible && isSentFromBot && <TimePresenter timestamp={timestamp} />}
     </View>
@@ -56,5 +71,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.white,
+  },
+  image: {
+    width: 225,
+    height: 300,
+    borderRadius: 8,
   },
 });
