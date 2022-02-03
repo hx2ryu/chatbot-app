@@ -17,9 +17,10 @@ const IconButton: React.FC<Props> = ({
   disabled,
   iconSource,
   iconStyle,
+  style,
 }) => {
   return (
-    <Pressable onPress={onPress} disabled={disabled}>
+    <Pressable onPress={onPress} disabled={disabled} style={style}>
       <Image source={iconSource} style={iconStyle} />
     </Pressable>
   );
