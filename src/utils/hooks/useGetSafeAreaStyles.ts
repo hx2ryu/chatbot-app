@@ -2,17 +2,34 @@ import { StyleProp, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const useGetSafeAreaStyle = () => {
-  const { top, bottom } = useSafeAreaInsets();
+  const insets = useSafeAreaInsets();
+  const { top, bottom } = {
+    top: insets.top > 16 ? insets.top : 16,
+    bottom: insets.bottom > 16 ? insets.bottom : 16,
+  };
+
   return {
-    topSafeAreaStyle: {
-      paddingTop: top > 16 ? top : 16,
+    top,
+    bottom,
+    topPaddingStyle: {
+      paddingTop: top,
     } as StyleProp<ViewStyle>,
-    bottomSafeAreaStyle: {
-      paddingBottom: bottom > 16 ? bottom : 16,
+    bottomPaddingStyle: {
+      paddingBottom: bottom,
     } as StyleProp<ViewStyle>,
-    verticalSafeAreaStyle: {
-      paddingTop: top > 16 ? top : 16,
-      paddingBottom: bottom > 16 ? bottom : 16,
+    verticalPaddingStyle: {
+      paddingTop: top,
+      paddingBottom: bottom,
+    } as StyleProp<ViewStyle>,
+    topMarginStyle: {
+      marginTop: top,
+    } as StyleProp<ViewStyle>,
+    bottomMarginStyle: {
+      marginBottom: bottom,
+    } as StyleProp<ViewStyle>,
+    verticalMarginStyle: {
+      marginTop: top,
+      marginBottom: bottom,
     } as StyleProp<ViewStyle>,
   };
 };

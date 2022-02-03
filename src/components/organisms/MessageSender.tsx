@@ -1,14 +1,21 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, ViewProps } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  TextInput,
+  View,
+} from 'react-native';
 import { COLORS, FONTS, ICONS } from '@/utils/theme';
-import { useInput } from '@/utils/hooks';
+import { useGetSafeAreaStyle, useInput } from '@/utils/hooks';
 import { IconButton } from '../atoms';
 import { useDialougue } from '@/store/dialogue/slice';
 
-interface Props extends ViewProps {}
-const MessageSender: React.FC<Props> = ({ style }) => {
+const MessageSender: React.FC = () => {
   const { value, onChangeText, sendVisible } = useInput();
   const { messageSent } = useDialougue();
+  const { bottomMarginStyle } = useGetSafeAreaStyle();
+  const behavior = Platform.OS === 'ios' ? 'padding' : 'height';
 
   const handleSend = () => {
     messageSent(value);
@@ -16,9 +23,14 @@ const MessageSender: React.FC<Props> = ({ style }) => {
   };
 
   return (
-    <View style={[styles.root, style]}>
-      <IconButton disabled iconSource={ICONS.add} iconStyle={styles.addIcon} />
-      <View style={styles.inputWrapper}>
+    <KeyboardAvoidingView style={styles.root} behavior={behavior}>
+      <IconButton
+        disabled
+        iconSource={ICONS.add}
+        iconStyle={styles.addIcon}
+        style={bottomMarginStyle}
+      />
+      <View style={[styles.inputWrapper, bottomMarginStyle]}>
         <TextInput
           value={value}
           onChangeText={onChangeText}
@@ -34,7 +46,7 @@ const MessageSender: React.FC<Props> = ({ style }) => {
           />
         )}
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
