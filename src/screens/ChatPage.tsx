@@ -2,14 +2,15 @@ import React from 'react';
 import { useGetSafeAreaStyle } from '@/utils/hooks';
 import { StyleSheet, View } from 'react-native';
 import { ChattingRoom, MessageSender } from '../components/organisms';
+import { COLORS } from '@/utils/theme';
 
 const ChatPage: React.FC = () => {
-  const { verticalSafeAreaStyle, bottomSafeAreaStyle } = useGetSafeAreaStyle();
+  const { verticalPaddingStyle } = useGetSafeAreaStyle();
 
   return (
-    <View style={[styles.root, verticalSafeAreaStyle]}>
+    <View style={[styles.root, verticalPaddingStyle]}>
       <ChattingRoom />
-      <MessageSender style={bottomSafeAreaStyle} />
+      <MessageSender />
     </View>
   );
 };
@@ -20,5 +21,6 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: COLORS.white,
   },
 });
