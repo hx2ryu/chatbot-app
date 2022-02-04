@@ -6,6 +6,7 @@ import {
 import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Dialogue } from './types';
+import { getResponse } from '@/utils/constants/dialogue';
 
 const dialogueSlice = createSlice({
   name: 'dialogue',
@@ -21,19 +22,17 @@ const dialogueSlice = createSlice({
       }),
       reducer: (state, { payload }: PayloadAction<Dialogue>) => {
         state.push(payload);
-        state.push({
-          sender: 'bot',
-          messages: [
-            { type: 'text', value: '안녕하세요.' },
-            { type: 'text', value: '반가워요' },
-            {
-              type: 'image',
-              value:
-                'https://cdn.pixabay.com/photo/2021/12/18/06/01/sunset-6878021_1280.jpg',
-            },
-          ],
-          timestamp: new Date().toISOString(),
-        });
+
+        // test response for respresenting all kind of message types.
+        const { value } = payload.messages[0];
+        const message = getResponse(value);
+        if (message) {
+          state.push({
+            sender: 'bot',
+            messages: [message],
+            timestamp: new Date().toISOString(),
+          });
+        }
       },
     },
   },
