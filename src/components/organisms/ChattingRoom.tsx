@@ -41,6 +41,7 @@ export default ChattingRoom;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
+    marginBottom: 50,
   },
   messagesWrapper: {
     flexDirection: 'row',
