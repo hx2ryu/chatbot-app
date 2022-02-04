@@ -24,8 +24,9 @@ const CardMessage: React.FC<Props> = ({ title, data }) => {
   }: ListRenderItemInfo<QuickButton>) => {
     const style: ViewStyle | undefined =
       index < lastIndex
-        ? { borderBottomWidth: 0.2, borderBottomColor: COLORS.grayscale[300] }
+        ? { borderBottomWidth: 0.3, borderBottomColor: COLORS.grayscale[300] }
         : undefined;
+
     return (
       <TextButton
         value={content}
