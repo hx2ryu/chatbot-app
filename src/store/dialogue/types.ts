@@ -7,4 +7,10 @@ export type Dialogue = {
 export type MessageType = {
   type: 'text' | 'card' | 'image';
   value: string;
+  buttons?: QuickButton[];
+};
+
+export type QuickButton = {
+  content: string;
+  message: string;
 };
