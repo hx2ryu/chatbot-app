@@ -4,6 +4,7 @@ import { Text } from '../atoms';
 import { COLORS } from '@/utils/theme';
 import { TimePresenter } from '.';
 import { Dialogue, MessageType } from '@/store/dialogue/types';
+import CardMessage from './CardMessage';
 
 type Props = {
   sender: Dialogue['sender'];
@@ -31,7 +32,7 @@ const Message: React.FC<Props> = ({
   }, [sender]);
 
   const renderMessageContent = () => {
-    const { type, value } = message;
+    const { type, value, buttons } = message;
     switch (type) {
       case 'text':
       default:
@@ -43,7 +44,7 @@ const Message: React.FC<Props> = ({
       case 'image':
         return <Image source={{ uri: value }} style={styles.image} />;
       case 'card':
-        return;
+        return <CardMessage title={value} data={buttons} />;
     }
   };
 
