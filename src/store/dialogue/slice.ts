@@ -6,7 +6,7 @@ import {
 import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Dialogue } from './types';
-import { getResponse } from '@/utils/constants/dialogue';
+import { getResponse } from '@/utils/dialogue';
 
 const dialogueSlice = createSlice({
   name: 'dialogue',

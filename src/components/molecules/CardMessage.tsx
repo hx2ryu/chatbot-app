@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Text, TextButton } from '../atoms';
 import { useDialougue } from '@/store/dialogue/slice';
-import { COLORS } from '@/utils/theme';
+import { COLORS } from '@/theme';
 
 type Props = {
   title: string;

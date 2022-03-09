@@ -1,8 +1,8 @@
 import React from 'react';
-import { useGetSafeAreaStyle } from '@/utils/hooks';
+import { useGetSafeAreaStyle } from '@/hooks';
 import { StyleSheet, View } from 'react-native';
 import { ChattingRoom, MessageSender } from '../components/organisms';
-import { COLORS } from '@/utils/theme';
+import { COLORS } from '@/theme';
 
 const ChatPage: React.FC = () => {
   const { verticalPaddingStyle } = useGetSafeAreaStyle();

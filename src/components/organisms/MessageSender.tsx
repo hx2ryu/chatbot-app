@@ -6,8 +6,8 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { COLORS, FONTS, ICONS } from '@/utils/theme';
-import { useGetSafeAreaStyle, useInput } from '@/utils/hooks';
+import { COLORS, FONTS, ICONS } from '@/theme';
+import { useGetSafeAreaStyle, useInput } from '@/hooks';
 import { IconButton } from '../atoms';
 import { useDialougue } from '@/store/dialogue/slice';
 

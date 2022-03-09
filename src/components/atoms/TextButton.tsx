@@ -1,4 +1,4 @@
-import { COLORS } from '@/utils/theme';
+import { COLORS } from '@/theme';
 import React from 'react';
 import {
   StyleSheet,

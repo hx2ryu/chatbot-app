@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Image, StyleSheet, View, ViewStyle } from 'react-native';
 import { Text } from '../atoms';
-import { COLORS } from '@/utils/theme';
+import { COLORS } from '@/theme';
 import { TimePresenter } from '.';
 import { Dialogue, MessageType } from '@/store/dialogue/types';
 import CardMessage from './CardMessage';
